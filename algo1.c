@@ -1,4 +1,4 @@
-// created by nabil & 3BS
+// created by nabil & 3BS & Hassanin .part2
 // O(sz1+sz2)
 
 #include <stdio.h>
