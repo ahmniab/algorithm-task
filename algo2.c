@@ -1,4 +1,5 @@
 // created by Mohamed Hassanin
+//Time Complexity: O(n)
 #include <stdio.h>
 
 int kth(int arr1[], int arr2[], int n, int m, int k)
