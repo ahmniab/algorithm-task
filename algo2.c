@@ -1,4 +1,4 @@
-// created by Mohamed Hassanin
+// created by Mohamed Hassanin (non-recursive algorithms)
 //Time Complexity: O(n)
 #include <stdio.h>
 
