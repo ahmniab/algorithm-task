@@ -2,7 +2,8 @@
 // O(sz1+sz2)
 
 #include <stdio.h>
-#define sz(a) sizeof(a)/sizeof(a[0])
+
+// #define sz(a) sizeof(a)/sizeof(a[0])
 
 void merge(int * dest ,int arr1[] , int sz1 , int arr2[] , int sz2){
     int j = 0 , k = 0;
@@ -29,7 +30,7 @@ int main() {
     scanf("%d",&k);
 
     printf("kth = %d\n",\
-    find_kth_el(arr1, sz(arr1),arr2, sz(arr2) , k)\
+    find_kth_el(arr1, 5,arr2, 7 , k)\
     );
     return 0;
 }
