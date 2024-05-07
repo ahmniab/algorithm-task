@@ -6,7 +6,7 @@
 // #define sz(a) sizeof(a)/sizeof(a[0])
 
 int *max(int* a , int* b){
-    if(*a > *b){
+    if(*a < *b){
         return a ;
     }
     else return b;
@@ -20,7 +20,7 @@ int *return_k_rec(int *arr1_front , int *arr2_front , int arr1[] , int arr2[] , 
         return max(arr1_front , arr2_front);
     }
     else {
-        if (*arr1_front < *arr2_front)
+        if (*arr1_front > *arr2_front)
         {
             arr2_front++;
         }else
@@ -30,7 +30,7 @@ int *return_k_rec(int *arr1_front , int *arr2_front , int arr1[] , int arr2[] , 
 
         return return_k_rec(arr1_front ,arr2_front , arr1 , arr2 , ++i , k);
     }
-    
+
 }
 
 void merge(int * dest ,int arr1[] , int sz1 , int arr2[] , int sz2){
@@ -43,7 +43,7 @@ void merge(int * dest ,int arr1[] , int sz1 , int arr2[] , int sz2){
 }
 
 int find_kth_el(int arr1[] , int sz1 , int arr2[] , int sz2 , int k){
-    return return_k_rec(&arr1[0] , arr2[0] , arr1 , arr2 , 0 , k );
+    return *return_k_rec(&arr1[0] , &arr2[0] , arr1 , arr2 , 0 , k );
 }
 
 int main() {
